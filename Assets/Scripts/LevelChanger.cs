@@ -27,7 +27,7 @@ public class LevelChanger : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {   
             GetComponent<BoxCollider2D>().enabled = false;
-          //  collision.GetComponent<PlayerInput>()
+            GameManager.instance.SetGameState(GameState.NextLevel);
             LoadLevel();
         }
     }
