@@ -50,7 +50,8 @@ public class Ring : MonoBehaviour
             if (data != null)
             {
                 // Gán màu và Tier dựa trên chỉ số duy nhất
-                data.SetSegment((EnergyTier)(colorIndex + 1), energyColors[colorIndex]);
+                data.SetSegment((EnergyTier)(colorIndex + 1), energyColors[colorIndex]);//
+            //}
             }
         }
     }
