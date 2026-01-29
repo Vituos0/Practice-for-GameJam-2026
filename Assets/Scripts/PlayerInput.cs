@@ -20,7 +20,9 @@ public class PlayerInput : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if(GameManager.instance.currentGameState != GameState.Playing)
+            return;
         ManagePlayerInput();
     }
     private void ManagePlayerInput()                   //Đây là hàm quản lý thao tác điều khiển đầu vào
@@ -46,5 +48,10 @@ public class PlayerInput : MonoBehaviour
             isControlling= false;
             player.MouseUpCallBack();
         }
+    }
+
+    private void OnDisable()
+    {
+        isControlling= false;
     }
 }

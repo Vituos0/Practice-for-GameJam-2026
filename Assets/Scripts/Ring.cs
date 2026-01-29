@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic; // Cần thêm thư viện này để dùng List
 using UnityEngine;
 
+
 public class Ring : MonoBehaviour
 {
     public GameObject piecePrefab;
